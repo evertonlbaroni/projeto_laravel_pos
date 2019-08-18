@@ -11,13 +11,37 @@
 |
 */
 
-Route::resources(['category' => 'CategoryController']);
-Route::resources(['product' => 'ProductController']);
-
-Route::get('/', function () {
 
 
-    // dd("oi!!!");
-    //return view('welcome');
+
+
+
+Route::get('/login', 'AuthController@index')->name('login');
+Route::post('/login', 'AuthController@login');
+
+
+
+
+
+
+Route::middleware(['auth'])->group(function () {
+
+
+    Route::get('/logout', 'AuthController@logout');
+    Route::resources(['category' => 'CategoryController']);
+    Route::resources(['product' => 'ProductController']);
+
+
+    Route::get('/', function () {
+
+
+        // dd("oi!!!");
+        return view('index');
+
+    });
+
+
 
 });
+
+

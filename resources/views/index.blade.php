@@ -8,7 +8,7 @@
 @endsection
 
 @section('content')
-    <p>This is my body content.</p>
+    <h1>Bem vindo!</h1>
 @endsection
 
 

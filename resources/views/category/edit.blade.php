@@ -1,6 +1,5 @@
 @extends('layout.internal')
 
-
 @section('breadcrumb')
 <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
@@ -8,8 +7,6 @@
     <li class="breadcrumb-item active" aria-current="page">Editar</li>
 </ol>
 @endsection
-
-
 
 @section('content')
 <form action="/category/{{ $category->id }}" method="POST" class="form-horizontal">

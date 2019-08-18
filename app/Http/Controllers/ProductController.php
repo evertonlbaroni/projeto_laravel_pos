@@ -59,4 +59,12 @@ class ProductController extends Controller
         return view("product.show", compact('product'));
     }
 
+    public function destroy($id)
+    {
+        $this->repository->destroy(
+            $this->repository->findByID($id, true)
+        );
+        return redirect('/product');
+    }
+
 }

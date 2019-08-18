@@ -9,8 +9,8 @@
 @endsection
 
 @section('content')
-<form action="/category" method="POST" class="form-horizontal">
-    <input type="hidden" name="_method" value="POST">
+    <form action="/category" method="POST" class="form-horizontal">
+        <input type="hidden" name="_method" value="POST">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
     <fieldset>
     <div class="form-group">
